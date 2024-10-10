@@ -1,0 +1,33 @@
+{
+	"name": "chrome-tough-cookie",
+	"version": "0.0.1-alpha.1",
+	"type": "module",
+	"main": "dist/index.js",
+	"files": [
+		"dist/"
+	],
+	"keywords": [],
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "",
+	"license": "ISC",
+	"scripts": {
+		"dev": "LOG_LEVEL=debug NODE_ENV=development NODE_OPTIONS=\"--import tsx/esm\" node",
+		"build": "rm -rf dist; tsc --project tsconfig.build.json",
+		"prepublishOnly": "npm run build"
+	},
+	"dependencies": {
+		"sqlite3": "^5.1.7",
+		"tough-cookie": "^5.0.0"
+	},
+	"optionalDependencies": {
+		"keytar": "^7.9.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.12",
+		"got": "^14.4.3",
+		"tsx": "^4.16.2",
+		"typescript": "^5.5.4"
+	}
+}
